@@ -1,0 +1,361 @@
+ html,
+ body,
+ div,
+ span,
+ applet,
+ object,
+ iframe,
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6,
+ p,
+ blockquote,
+ pre,
+ a,
+ abbr,
+ acronym,
+ address,
+ big,
+ cite,
+ code,
+ del,
+ dfn,
+ em,
+ img,
+ ins,
+ kbd,
+ q,
+ s,
+ samp,
+ small,
+ strike,
+ strong,
+ sub,
+ sup,
+ tt,
+ var,
+ b,
+ u,
+ i,
+ center,
+ dl,
+ dt,
+ dd,
+ ol,
+ ul,
+ li,
+ fieldset,
+ form,
+ label,
+ legend,
+ table,
+ caption,
+ tbody,
+ tfoot,
+ thead,
+ tr,
+ th,
+ td,
+ article,
+ aside,
+ canvas,
+ details,
+ embed,
+ figure,
+ figcaption,
+ footer,
+ header,
+ hgroup,
+ menu,
+ nav,
+ output,
+ ruby,
+ section,
+ summary,
+ time,
+ mark,
+ audio,
+ video {
+     margin: 0;
+     padding: 0px;
+     border: 0;
+     font-size: 16px;
+     /* Sets default font-size to 16px, ensuring 1em = 16px; */
+     
+     font: inherit;
+     vertical-align: baseline;
+     display: block;
+ }
+ /* HTML5 display-role reset for older browsers */
+ 
+ article,
+ aside,
+ details,
+ figcaption,
+ figure,
+ footer,
+ header,
+ hgroup,
+ menu,
+ nav,
+ section {} body {
+     background-color: black;
+     /*white*/
+     
+     line-height: 1;
+     font-family: 'Roboto', sans-serif;
+     font-size: 1em;
+ }
+ a {
+     color: grey;
+     /*grey*/
+     
+     text-decoration: none;
+ }
+ h1 {
+     text-align: center;
+     font-size: 1.5em;
+     padding: 2%;
+ }
+ h3 {
+     text-align: center;
+     font-size: 1em;
+     color: grey;
+ }
+ figcaption {
+     color: grey;
+     font-size: 1em;
+ }
+ p {
+     margin-top: 3%;
+     margin-bottom: 7%;
+ }
+ img {
+     max-width: 100%;
+     max-height: 100vh;
+     margin-left: auto;
+     margin-right: auto;
+ }
+}
+ol,
+ul {
+    list-style: none;
+}
+blockquote,
+q {
+    quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* Start your base/mobile styles here */
+
+body {
+    color: rgba(254, 251, 241, 0.85);
+    /*white-yellow*/
+    
+    padding: 5px;
+}
+.square {
+    width: 45px;
+    height: 45px;
+    background-color: none;
+    border: solid pink;
+    opacity: .75;
+    z-index: 3;
+    display: block;
+}
+.circle {
+    width: 45px;
+    height: 45px;
+    background-color: none;
+    border: solid pink;
+    opacity: .75;
+    z-index: 3;
+    display: block;
+}
+#square_scientists {
+    /*background-color: purple;*/
+    
+    position: absolute;
+    bottom: 25%;
+    left: 57%;
+    -webkit-transition: opacity 5s ease-in;
+    -moz-transition: opacity 5s ease-in;
+    -o-transition: opacity 5s ease-in;
+    transition: opacity 5s ease-in;
+    /*content: "i"; color: red;*/
+}
+#circle_transgender {
+    position: absolute;
+    bottom: 15%;
+    right: 10%;
+    -webkit-transition: opacity 5s ease-in;
+    -moz-transition: opacity 5s ease-in;
+    -o-transition: opacity 5s ease-in;
+    transition: opacity 5s ease-in;
+    /*content: "i"; color: red;*/
+}
+#square_abortion {
+    position: absolute;
+    bottom: 29%;
+    left: 18%;
+    -webkit-transition: opacity 5s ease-in;
+    -moz-transition: opacity 5s ease-in;
+    -o-transition: opacity 5s ease-in;
+    transition: opacity 5s ease-in;
+}
+#square_immigration {
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    -webkit-transition: opacity 5s ease-in;
+    -moz-transition: opacity 5s ease-in;
+    -o-transition: opacity 5s ease-in;
+    transition: opacity 5s ease-in;
+    /*content: "i"; color: red;*/
+}
+#circle_homosexuality {
+    position: absolute;
+    top: 42%;
+    right: 24%;
+    -webkit-transition: opacity 5s ease-in;
+    -moz-transition: opacity 5s ease-in;
+    -o-transition: opacity 5s ease-in;
+    transition: opacity 5s ease-in;
+    /*content: "i"; color: red*/
+}
+#square_media {
+    position: absolute;
+    bottom: 15%;
+    right: 50%;
+    -webkit-transition: opacity 5s ease-in;
+    -moz-transition: opacity 5s ease-in;
+    -o-transition: opacity 5s ease-in;
+    transition: opacity 5s ease-in;
+}
+.photo-container {
+    width: 100%;
+    position: relative;
+    /*absolute?*/
+    /*z-index: 1;*/
+}
+.info_slides {
+    width: 100%;
+    background-color: none;
+    /* display: none;} makes slide invisible*/
+    
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    z-index: 2;
+    /* While dial the z-index down because even if an element doesn't have opacity it still has 'mass'. The info window would get in the way of clicking on the circles without this */
+    
+    transition: opacity .5s ease-in-out;
+    /* this gives us the fade in and fade out effect but only on the opacity element. You cannot use the display property with transitions. */
+    
+    transition: opacity .5s ease-in-out;
+    /* this gives us the fade in and fade out effect but only on the opacity element. You cannot use the display property with transitions. */
+    
+    transition: opacity .5s ease-in-out;
+    /* this gives us the fade in and fade out effect but only on the opacity element. You cannot use the display property with transitions. */
+}
+.info_slides.active {
+    z-index: 4;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /* We give the info_slides a higher z-index on active */
+    
+    padding: 70px 15px 15px 15px;
+    font-size: 1.5em;
+    text-align: center;
+    color: white;
+    height: 100%;
+    opacity: 1;
+}
+/*#popIn{ position: absolute; top: 0px; left: 0px; padding: 70px 15px 15px 15px; font-size: 1.5em; text-align: center; color: white; height: 100%; /*display: none;*/
+}
+.info_popIn {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 70px 15px 15px 15px;
+    font-size: 1.5em;
+    text-align: center;
+    color: white;
+    height: 100%;
+    /*display: none;*/
+}
+.data-text {
+    text-align:center;
+}
+.btn_close {
+    position: absolute;
+    font-family: sans-serif;
+    top: 1%;
+    left: 99%;
+    font-size: 2em;
+    color: white;
+    z-index: 4;
+    font-weight: 900;
+}
+.btn_close_show {
+    display: block;
+    top:1% left:92%;
+}
+*/ .washington-image {
+    margin-bottom: 15px;
+}
+/* Tablet/Desktop overrides */
+
+@media(min-width: 518px) {
+    figcaption.notes {
+        text-align: center;
+    }
+    p {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    p {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    @media(min-width: 681px) {
+        figcaption {
+            text-align: center;
+        }
+        p {
+            margin-bottom: 5%;
+        }
+        .circle {
+            width: 80px;
+            height: 80px;
+        }
+        color: red*/ @media(min-width: 729px) {
+            /* Any adjustments for desktop and larger go here. Note these styles will be applied to anything 729px or larger -- so desktop */
+            
+            figcaption {
+                text-align: center;
+            }
+        }
+        .circle {
+            width: 80px;
+            height: 80px;
+        }
+        #circle_homosexuality {
+            position: absolute;
+            top: 42%;
+            right: 40%;
